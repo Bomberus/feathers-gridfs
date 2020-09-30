@@ -1,0 +1,64 @@
+{
+  "name": "feathers-gridfs",
+  "description": "Support GridFs for file storage",
+  "version": "0.0.0",
+  "homepage": "https://github.com/feathersjs/feathers-gridfs",
+  "main": "lib/",
+  "types": "lib/",
+  "keywords": [
+    "feathers",
+    "feathers-plugin"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/feathersjs/feathers-gridfs.git"
+  },
+  "author": {
+    "name": "Feathers contributors",
+    "email": "hello@feathersjs.com",
+    "url": "https://feathersjs.com"
+  },
+  "contributors": [],
+  "bugs": {
+    "url": "https://github.com/feathersjs/feathers-gridfs/issues"
+  },
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "scripts": {
+    "prepublish": "npm run compile",
+    "compile": "shx rm -rf lib/ && tsc",
+    "test": "npm run compile && npm run mocha",
+    "mocha": "mocha --config ../../.mocharc.ts.json --recursive test/**.test.ts test/**/*.test.ts"
+  },
+  "semistandard": {
+    "env": [
+      "mocha"
+    ]
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "@feathersjs/adapter-commons": "^4.5.4",
+    "@feathersjs/errors": "^4.5.8",
+    "@feathersjs/feathers": "^4.5.8",
+    "busboy": "^0.3.1",
+    "mongodb": "^3.6.2"
+  },
+  "devDependencies": {
+    "@types/busboy": "^0.2.3",
+    "@types/mongodb": "^3.5.27",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^10.0.0",
+    "browserify": "^16.5.2",
+    "chai": "^3.5.0",
+    "istanbul": "^1.1.0-alpha.1",
+    "mocha": "^8.1.3",
+    "semistandard": "^14.2.3",
+    "shx": "^0.3.2",
+    "uglify-js": "^3.10.4"
+  }
+}
